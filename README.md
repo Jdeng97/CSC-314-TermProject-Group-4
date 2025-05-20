@@ -52,4 +52,5 @@ http://localhost:3000
 Contributions:
 
 Jason Deng: HTML/CSS, app.js, seed-reviews
+
 Shadi Daher: database, routes, seed-products
