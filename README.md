@@ -36,9 +36,11 @@ npm install
 ```
 Run the App:
 
-npm run dev    # for development with nodemon
+"npm run dev"    # for development with nodemon
+
 # OR
-npm start      # to run normally
+
+"npm start"      # to run normally
 
 
 Then open your browser to:
