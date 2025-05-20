@@ -42,9 +42,9 @@ Run the App:
 
 "npm start"  to run normally
 
-
+```
 Then open your browser to:
 
 http://localhost:3000
 
-
+```
