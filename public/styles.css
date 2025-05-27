@@ -278,3 +278,31 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  input[type="number"], button {
+    width: 100%;
+  }
+}
+
