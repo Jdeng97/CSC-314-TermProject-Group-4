@@ -29,6 +29,7 @@
       padding: 12px;
       text-align: center;
       border-bottom: 1px solid #ccc;
+      vertical-align: middle;
     }
 
     td img {
@@ -40,6 +41,7 @@
 
     input[type="number"] {
       width: 60px;
+      text-align: center;
     }
 
     button {
@@ -61,19 +63,19 @@
 </head>
 <body>
   <header>
-        <div class="logo">Pet Paradise</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
-            <a href="profile.html">Profile</a>
-            <a href="cart.html">Cart</a>
-            <a href="about.html">About</a>
-            <a href="faq.html">FAQ</a>
-            <a href="update.html">Edit Profile</a>
-            <a href="/users/logout">Logout</a>
-        </nav>
-    </header>
+    <div class="logo">Pet Paradise</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="profile.html">Profile</a>
+      <a href="cart.html">Cart</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="update.html">Edit Profile</a>
+      <a href="/users/logout">Logout</a>
+    </nav>
+  </header>
 
   <main>
     <h1>Your Shopping Cart</h1>
@@ -120,14 +122,13 @@
           row.innerHTML = `
             <td><img src="${item.image}" alt="${item.title}"></td>
             <td>${item.title}</td>
-            <td>
-              <form method="POST" action="/cart/update" style="display:flex; gap:5px; justify-content:center;">
-                <input type="hidden" name="productId" value="${item.id}">
-                <input type="number" name="quantity" value="${item.quantity}" min="0" max="10" required>
-            </td>
+            <td>${item.quantity}</td>
             <td>$${item.price.toFixed(2)}</td>
             <td>$${(item.price * item.quantity).toFixed(2)}</td>
             <td>
+              <form method="POST" action="/cart/update" style="display: flex; flex-direction: column; align-items: center;">
+                <input type="hidden" name="productId" value="${item.id}">
+                <input type="number" name="quantity" value="${item.quantity}" min="0" max="10" required>
                 <button type="submit">Update</button>
               </form>
             </td>
